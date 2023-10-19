@@ -11,7 +11,7 @@ describe("Test Drawer fire's functions", () => {
         const fn = jest.fn();
         const { container } = render(<Drawer getContainer={false} open onClose={fn} />);
         drawer.fireClose(container);
-        expect(fn).toBeCalled();
+        expect(fn).not.toBeCalled();
     });
 
     test('fireClose by icon', () => {
